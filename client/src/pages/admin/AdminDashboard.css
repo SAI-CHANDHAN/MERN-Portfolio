@@ -1,0 +1,285 @@
+/* AdminDashboard.css */
+
+.admin-dashboard {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.dashboard-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.dashboard-header p {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+/* Stats Cards Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  background: #fff;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  box-shadow: 0 4px 16px rgb(0 0 0 / 0.15);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  margin-right: 1.25rem;
+}
+
+.stat-info .stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.stat-info .stat-title {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.25rem;
+}
+
+/* Quick Actions */
+.dashboard-section {
+  margin-bottom: 3rem;
+}
+
+.dashboard-section h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.quick-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.quick-action-card {
+  border-radius: 12px;
+  padding: 1.5rem 1.25rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.quick-action-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.2);
+}
+
+.action-icon {
+  font-size: 2.5rem;
+  margin-right: 1rem;
+}
+
+/* Quick Action colors */
+.quick-action-card.blue {
+  background: #3b82f6;
+}
+
+.quick-action-card.green {
+  background: #10b981;
+}
+
+.quick-action-card.purple {
+  background: #8b5cf6;
+}
+
+.quick-action-card.orange {
+  background: #f97316;
+}
+
+/* Recent Activity */
+.activity-list {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  padding: 1rem;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-icon {
+  font-size: 1.8rem;
+  width: 2.5rem;
+  text-align: center;
+  margin-right: 1rem;
+}
+
+.activity-content {
+  flex: 1;
+}
+
+.activity-text {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.activity-time {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* No Activity */
+.no-activity {
+  text-align: center;
+  padding: 2rem;
+  color: #999;
+  font-style: italic;
+}
+
+/* Loading Skeleton */
+.activity-skeleton .activity-item-skeleton {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.skeleton-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ddd;
+  margin-right: 1rem;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.skeleton-content {
+  flex: 1;
+}
+
+.skeleton-line {
+  height: 10px;
+  background: #ddd;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.skeleton-line.short {
+  width: 40%;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+/* Portfolio Overview */
+.overview-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.overview-card {
+  background: #fff;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  border-radius: 10px;
+  padding: 1.5rem;
+  flex: 1 1 300px;
+}
+
+.health-indicators .indicator {
+  margin-bottom: 1rem;
+}
+
+.indicator-label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #444;
+}
+
+.indicator-bar {
+  background: #eee;
+  border-radius: 10px;
+  height: 14px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.indicator-fill {
+  height: 100%;
+  transition: width 0.5s ease;
+  border-radius: 10px 0 0 10px;
+}
+
+.indicator-fill.green {
+  background-color: #10b981;
+}
+
+.indicator-fill.blue {
+  background-color: #3b82f6;
+}
+
+.indicator-fill.purple {
+  background-color: #8b5cf6;
+}
+
+.next-steps {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin-top: 0.5rem;
+  color: #555;
+}
+
+.next-steps li {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .overview-cards {
+    flex-direction: column;
+  }
+
+  .stats-grid,
+  .quick-actions-grid {
+    grid-template-columns: 1fr;
+  }
+}
